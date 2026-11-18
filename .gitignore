@@ -1,0 +1,13 @@
+# Build output
+obj/
+push_swap
+*.o
+*.a
+
+# 42-provided files (not mine to publish)
+Push_Swap.pdf
+checker_linux
+checker_Mac
+
+# Editor
+.vscode/
