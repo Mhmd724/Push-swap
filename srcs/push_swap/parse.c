@@ -12,18 +12,19 @@
 
 #include "../inc/push_swap.h"
 
-bool isint(char *str)
+bool	isint(char *str)
 {
-	bool is_int;
-	unsigned int neg_sign;
-	unsigned int i;
+	bool			is_int;
+	unsigned int	neg_sign;
+	unsigned int	i;
 
 	i = 0;
 	neg_sign = 0;
-	is_int = true;
+	is_int = (str[0] != '\0');
 	while (str[i] && is_int)
 	{
-		if (str[i] == '-' && neg_sign < 1)
+		if (i == 0 && (str[i] == '-' || str[i] == '+')
+			&& ft_isdigit(str[i + 1]))
 			neg_sign++;
 		else if (!ft_isdigit(str[i]))
 			is_int = false;
@@ -32,10 +33,10 @@ bool isint(char *str)
 	return (!is_int);
 }
 
-bool atoi_check(const char *str, int *n)
+bool	atoi_check(const char *str, int *n)
 {
-	int sign;
-	bool overflow;
+	int		sign;
+	bool	overflow;
 
 	*n = 0;
 	sign = -1;
@@ -56,7 +57,7 @@ bool atoi_check(const char *str, int *n)
 	return (overflow);
 }
 
-bool there_duplicates(t_stack *a, long n)
+bool	there_duplicates(t_stack *a, long n)
 {
 	if (!a)
 		return (false);

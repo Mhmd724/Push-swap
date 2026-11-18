@@ -12,9 +12,8 @@
 
 #include "../inc/push_swap.h"
 
-void prep_for_push(t_stack **stack,
-				   t_stack *cheapest_on_top,
-				   char stack_name)
+void	prep_for_push(t_stack **stack,
+	t_stack *cheapest_on_top, char stack_name)
 {
 	while (*stack != cheapest_on_top)
 	{
@@ -35,16 +34,16 @@ void prep_for_push(t_stack **stack,
 	}
 }
 
-static void append_node(t_stack **stack, int n)
+static void	append_node(t_stack **stack, int n)
 {
-	t_stack *newnode;
-	t_stack *last_node;
+	t_stack	*newnode;
+	t_stack	*last_node;
 
 	if (!stack)
-		return;
+		return ;
 	newnode = (t_stack *)malloc(sizeof(t_stack));
 	if (!newnode)
-		return;
+		return ;
 	newnode->nbr = n;
 	newnode->next = NULL;
 	if (!(*stack))
@@ -60,11 +59,11 @@ static void append_node(t_stack **stack, int n)
 	}
 }
 
-void init_stack_a(t_stack **a, char **av)
+void	init_stack_a(t_stack **a, char **av)
 {
-	int n;
-	int i;
-	int status;
+	int	n;
+	int	i;
+	int	status;
 
 	i = 0;
 	status = 0;
@@ -83,6 +82,6 @@ void init_stack_a(t_stack **a, char **av)
 	if (status)
 	{
 		free_stack(a);
-		ft_putendl_fd("Error\n", 2);
+		ft_putendl_fd("Error", 2);
 	}
 }
