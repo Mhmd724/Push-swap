@@ -12,10 +12,17 @@ These are the only allowed operations:
 
 | Instruction | Effect |
 |-------------|--------|
-| `sa` / `sb` / `ss` | Swap the first two elements of A / B / both |
-| `pa` / `pb` | Push the top of B onto A / the top of A onto B |
-| `ra` / `rb` / `rr` | Rotate A / B / both up (the first element becomes the last) |
-| `rra` / `rrb` / `rrr` | Reverse-rotate A / B / both (the last element becomes the first) |
+| `sa` | Swap the first two elements of A |
+| `sb` | Swap the first two elements of B |
+| `ss` | `sa` and `sb` at the same time |
+| `pa` | Take the top element of B and put it on top of A |
+| `pb` | Take the top element of A and put it on top of B |
+| `ra` | Rotate A up: the first element becomes the last |
+| `rb` | Rotate B up: the first element becomes the last |
+| `rr` | `ra` and `rb` at the same time |
+| `rra` | Reverse-rotate A: the last element becomes the first |
+| `rrb` | Reverse-rotate B: the last element becomes the first |
+| `rrr` | `rra` and `rrb` at the same time |
 
 ## The algorithm
 
