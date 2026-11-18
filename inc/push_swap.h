@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <stdbool.h>
-# include <stdio.h>
 # include "../libft/inc/libft.h"
 # include "../libft/inc/ft_printf.h"
 
