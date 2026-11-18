@@ -52,9 +52,7 @@ bool atoi_check(const char *str, int *n)
 			overflow = true;
 		str++;
 	}
-	printf("nb before: %d\n", *n);
 	*n *= sign;
-	printf("nb after: %d\n", *n);
 	return (overflow);
 }
 
