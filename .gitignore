@@ -1,6 +1,5 @@
 # Build output
 obj/
-push_swap
 *.o
 *.a
 
